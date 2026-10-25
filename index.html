@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080f1c">
+  <meta name="description" content="CyberShield is a browser-based educational password security checker.">
+  <title>CyberShield | Password Security</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <div class="logo">🛡️</div>
+    <h1>CyberShield</h1>
+    <p class="subtitle">Password Security Analyzer</p>
+
+    <div class="notice">
+      <strong>Privacy first</strong>
+      <p>Analysis happens in your browser. Do not enter real account passwords.</p>
+    </div>
+
+    <label for="password">Test password</label>
+
+    <div class="password-row">
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter a test password"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        maxlength="128"
+      >
+      <button id="toggle" class="secondary" type="button">
+        Show
+      </button>
+    </div>
+
+    <div class="meter" role="progressbar"
+         aria-label="Password rule score"
+         aria-valuemin="0" aria-valuemax="5"
+         aria-valuenow="0" id="meter">
+      <div id="bar"></div>
+    </div>
+
+    <div class="result-row">
+      <h2 id="result" aria-live="polite">Waiting for input</h2>
+      <span id="score">0/5</span>
+    </div>
+
+    <p id="summary">Enter a fictional password to begin.</p>
+
+    <h3>Security suggestions</h3>
+    <ul id="tips">
+      <li>Use a long, unique password.</li>
+      <li>Avoid predictable words and patterns.</li>
+    </ul>
+
+    <button id="clear" class="clear" type="button">
+      Clear password
+    </button>
+
+    <footer>
+      <p>CyberShield • Student cybersecurity project</p>
+      <small>This heuristic score is educational, not a guarantee of security.</small>
+    </footer>
+  </main>
+</body>
+</html>
